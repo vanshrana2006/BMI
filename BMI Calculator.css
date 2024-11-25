@@ -1,0 +1,328 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(weight.jpeg);
+    background-size: cover;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 630px;
+    width: 480px;
+    background-image: linear-gradient(to bottom right , #272727, #009FB7, #696773);
+    border-radius: 20px;
+    border: 2px solid white;
+    box-shadow: 0px 0px 25px 15px #7aa5d2;
+    animation: fadeInUp 1s ease-out, slideInFromLeft 2s ease-out forwards;
+
+}
+
+h1 {
+    font-size: 2.9rem;
+    position: relative;
+    top: 60px;
+    color: #FFF500;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    animation: fadeInUp 1s ease-out;
+    animation-delay: 0.9s;
+}
+
+input{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 15px;
+    margin-top: 1px;
+    margin-bottom: 4px;
+    color: aliceblue;
+    transition: all 0.3s ease;
+    transform: translateY(5px);
+    opacity: 1;
+}
+
+input:focus, #weight:focus, #height:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.6);
+    transform: rotate(0.3deg);
+    opacity: 1;
+}
+
+#weight {
+    margin-left: 20px;
+    border: none;
+    outline: none;
+    background: none;
+    border-bottom: 1px solid white;
+    height: 40px;
+    width: 200px;
+    animation: fadeInUp 1s ease-out, slideInFromLeft 2s ease-out forwards;
+    animation-delay: 0.9s, 0.3s; 
+}
+
+#height {
+    border: none;
+    outline: none;
+    background: none;
+    border-bottom: 1px solid white;
+    height: 40px;
+    width: 200px;
+    margin-left: 20px;
+    animation: fadeInUp 1s ease-out, slideInFromRight 2s ease-out forwards;
+    animation-delay: 0.9s, 0.5s;
+}
+
+#age{
+    border: none;
+    outline: none;
+    background: none;
+    border-bottom: 1px solid white;
+    height: 40px;
+    width: 200px;
+    margin-left: 20px;
+    animation: fadeInUp 1s ease-out, slideInFromRight 2s ease-out forwards;
+    animation-delay: 0.9s, 0.5s;
+}
+
+
+label {
+    display: block;
+    margin-bottom: 3px;
+    font-weight: bold;
+}
+
+p {
+    position: relative;
+    top: 50px;
+    font-size: 1.4rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    width: 300px;
+    height: 50px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 5px solid white;
+    background: none;
+    font-size: 1.5rem;
+    text-align: center;
+    color: white;
+    margin-top: 80px;
+    box-shadow: #272727;
+    transition: 0.1s ease-in-out;
+}
+
+button:hover {
+    color: #009FB7;
+    background-color: white;
+    transform: scale(1.1);
+}
+
+#result {
+    margin-top: 18px;
+    padding: 10px;
+    text-align: center;
+    background-color: #eeeeee;
+    margin-bottom: 20px;
+    font-size: 20px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: transform 0.5s ease, color 0.5s ease;
+}
+
+
+.tt {
+    padding: 10px;
+    margin: 1px;
+    margin-top: 2px;
+    padding-top: 2px;
+}
+
+.swg {
+    margin-top: 100px;
+    animation: slideIn 1s ease-out;
+}
+
+#weight-guide {
+    text-align: center;
+    animation: fadeInUp 1s ease-out, slideInFromRight 2s ease-out forwards;
+}
+
+h3 {
+    font-size: 2.0rem;
+    color: #FFF500;
+}
+
+.saved {
+    margin-top: 100px;
+    background-color: #eeeeee;
+    padding: 30px;
+    border: 2px solid white;
+    border-radius: 15px;
+    box-shadow: 0px 0px 25px 15px #7aa5d2;
+    width: 380px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 100px;
+    max-height: 350px;
+    overflow-y: auto;
+    background-image: linear-gradient(to bottom right , #272727, #009FB7, #696773);
+    animation: fadeInUp 1s ease-out, slideInFromBottom 2s ease-out forwards;
+}
+
+.underweight {
+    color: orange;
+    transform: translateX(-20px) scale(1.05);
+}
+
+.normal {
+    color: green;
+    transform: translateX(20px) scale(1.05);
+}
+
+.overweight {
+    color: red;
+    transform: translateX(-20px) scale(1.05);
+}
+
+.obesity1 {
+    color: rgb(189, 0, 0);
+    transform: translateX(20px) scale(1.05);
+}
+
+.obesity2 {
+    color: rgb(161, 1, 1);
+    transform: translateX(-20px) scale(1.05);
+}
+
+.extreme {
+    color: rgb(133, 0, 0);
+    transform: translateX(20px) scale(1.05);
+}
+
+#history {
+    font-size: 1.2rem;
+}
+
+@media (max-width: 830px) {
+    body {
+        flex-direction: column;
+    }
+    .container {
+        width: 350px;
+        margin-top: 100px;
+    }
+    .swg {
+        width: 350px;
+        margin-top: 100px;
+    }
+    .saved {
+        width: 320px;
+    }
+}
+
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.5);
+        opacity: 1;
+    }
+    60% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromBottom {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromTop {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

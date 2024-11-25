@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="BMI Calculator.css">
+    <link rel="icon" href="BMI.png" type="image/png">
+</head>
+<body>
+    <div class="container">
+        <h1>BMI Calculator</h1>
+        <br>
+
+        <form>
+        <div class = input-group>
+        <p><label for="weight">Weight (kg):</label>
+                <input type="number" id="weight" name="weight" required></p>
+        </div>
+        <div class = input-group>
+        <p><label for="height">Height (cm):</label>
+                <input type="number" id="height" name="height" required></p>
+        <div class="input-group">
+                <p><label for="age">Age (years):</label>
+                    <input type="number" id="age" name="age" required></p>
+                </div>
+        
+        <button type="button" id="calculate">Calculate BMI</button>
+
+        <div class="tt"><br> <div id="result"></div><br></div>
+       </div> </form>
+    </div>
+
+    <div class="swg">
+    <div id="weight-guide">
+        <h3>BMI WEIGHT GUIDE</h3>
+        <p>Underweight = Less than 18.5</p>
+        <p>Normal Weight = 18.5 to 24.9</p>
+        <p>Over - weight = 25 to 29.9</p>
+        <p>Obesity - Moderate = 30 to 34.9</p>
+        <p>Obesity - Severe = 35 to 39.9</p>
+        <p>Extreme Obesity = Greater than 40</p>
+    </div>
+    <br><br>
+    
+    <div class="saved">
+        <h3>Saved BMI Records:</h3>
+        <br><br>
+        <ul id="history"></ul>
+    </div>
+
+    </div>
+    <script src="BMI Calculator.js"></script>
+</body>
+</html>
